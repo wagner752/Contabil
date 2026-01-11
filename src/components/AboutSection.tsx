@@ -1,10 +1,11 @@
 import { Target, Eye, Handshake, CheckCircle } from "lucide-react";
+import equipeImg from "@/assets/equipe.jpg";
 
 const AboutSection = () => {
   const values = ["Ética", "Transparência", "Agilidade", "Comprometimento"];
 
   return (
-    <section id="quem-somos" className="py-24 bg-ice-gray">
+    <section id="quem-somos" className="min-h-screen flex items-center py-24 bg-ice-gray">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Story */}
@@ -16,7 +17,7 @@ const AboutSection = () => {
               Uma história de compromisso e excelência
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Há mais de 15 anos, nossa equipe de contadores e consultores trabalha 
+              Há mais de 8 anos, nossa equipe de contadores e consultores trabalha 
               incansavelmente para transformar a gestão contábil de centenas de empresas 
               em todo o Brasil.
             </p>
@@ -26,17 +27,19 @@ const AboutSection = () => {
               uma parceria de longo prazo baseada em confiança e resultados.
             </p>
 
-            {/* Team Image Placeholder */}
+            {/* Team Image */}
             <div className="relative mt-8">
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-petrol-blue/20 to-petrol-blue/5 flex items-center justify-center overflow-hidden">
-                <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-petrol-blue/20 flex items-center justify-center">
-                    <span className="text-3xl">👥</span>
-                  </div>
-                  <p className="text-petrol-blue font-medium">Nossa Equipe</p>
+              <div className="aspect-video rounded-2xl overflow-hidden">
+                <img 
+                  src={equipeImg} 
+                  alt="Nossa Equipe" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-petrol-blue/30 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <p className="text-white font-medium text-lg">Nossa Equipe</p>
                 </div>
               </div>
-              <div className="absolute inset-0 rounded-2xl" style={{ background: "linear-gradient(135deg, rgba(11, 37, 69, 0.1) 0%, transparent 100%)" }} />
             </div>
           </div>
 

@@ -109,8 +109,8 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="client-area" size="lg">
-              Área do Cliente
+            <Button variant="client-area" size="lg" asChild>
+              <a href="#area-cliente">Área do Cliente</a>
             </Button>
           </div>
 
@@ -131,12 +131,12 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t">
             <nav className="flex flex-col gap-4">
-              <a href="#inicio" className="nav-link py-2">Início</a>
-              <a href="#quem-somos" className="nav-link py-2">Quem Somos</a>
-              <a href="#solucoes" className="nav-link py-2">Soluções</a>
-              <a href="#contato" className="nav-link py-2">Contato</a>
-              <Button variant="client-area" size="lg" className="mt-2">
-                Área do Cliente
+              <a href="#inicio" className="nav-link py-2" onClick={() => setMobileMenuOpen(false)}>Início</a>
+              <a href="#quem-somos" className="nav-link py-2" onClick={() => setMobileMenuOpen(false)}>Quem Somos</a>
+              <a href="#solucoes" className="nav-link py-2" onClick={() => setMobileMenuOpen(false)}>Soluções</a>
+              <a href="#contato" className="nav-link py-2" onClick={() => setMobileMenuOpen(false)}>Contato</a>
+              <Button variant="client-area" size="lg" className="mt-2" asChild>
+                <a href="#area-cliente" onClick={() => setMobileMenuOpen(false)}>Área do Cliente</a>
               </Button>
             </nav>
           </div>

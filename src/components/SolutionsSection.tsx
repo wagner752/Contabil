@@ -40,7 +40,7 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section id="solucoes" className="py-24 bg-white">
+    <section id="solucoes" className="min-h-screen flex items-center py-24 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

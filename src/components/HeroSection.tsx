@@ -1,9 +1,12 @@
 import { MessageCircle, ArrowRight, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import modeloContabilidade from "@/assets/modelo-contabilidade.png";
 
 const HeroSection = () => {
+  const whatsappLink = "https://wa.me/5584991937731?text=Ol%C3%A1%20gostaria%20de%20atendimento";
+
   return (
-    <section id="inicio" className="relative gradient-hero min-h-[90vh] flex items-center overflow-hidden">
+    <section id="inicio" className="relative gradient-hero min-h-screen flex items-center overflow-hidden">
       {/* Decorative blobs */}
       <div className="blob-decoration w-[500px] h-[500px] -right-20 top-20" />
       <div className="blob-decoration w-[300px] h-[300px] right-1/4 bottom-10" />
@@ -32,24 +35,28 @@ const HeroSection = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <Button variant="hero-primary" size="xl">
-                <MessageCircle className="h-5 w-5" />
-                Falar com um especialista
+              <Button variant="hero-primary" size="xl" asChild>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="h-5 w-5" />
+                  Falar com um especialista
+                </a>
               </Button>
-              <Button variant="hero-secondary" size="xl">
-                Conhecer serviços
-                <ArrowRight className="h-5 w-5" />
+              <Button variant="hero-secondary" size="xl" asChild>
+                <a href="#solucoes">
+                  Conhecer serviços
+                  <ArrowRight className="h-5 w-5" />
+                </a>
               </Button>
             </div>
 
             {/* Stats */}
             <div className="flex gap-8 pt-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <div>
-                <p className="text-3xl font-heading font-bold text-white">500+</p>
-                <p className="text-white/70 text-sm">Empresas atendidas</p>
+                <p className="text-3xl font-heading font-bold text-white">+100</p>
+                <p className="text-white/70 text-sm">Clientes atendidos</p>
               </div>
               <div>
-                <p className="text-3xl font-heading font-bold text-white">15+</p>
+                <p className="text-3xl font-heading font-bold text-white">+8</p>
                 <p className="text-white/70 text-sm">Anos de experiência</p>
               </div>
               <div>
@@ -61,16 +68,13 @@ const HeroSection = () => {
 
           {/* Right Content - Image */}
           <div className="relative flex justify-center lg:justify-end animate-slide-up">
-            {/* Placeholder for professional image */}
             <div className="relative">
-              <div className="w-[350px] h-[450px] md:w-[400px] md:h-[520px] rounded-2xl bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-sm border border-white/20 flex items-end justify-center overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-t from-petrol-blue/50 to-transparent absolute inset-0" />
-                <div className="relative z-10 text-center pb-8">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
-                    <span className="text-4xl">👩‍💼</span>
-                  </div>
-                  <p className="text-white font-medium">Sua parceira de negócios</p>
-                </div>
+              <div className="w-[350px] h-[450px] md:w-[400px] md:h-[520px] rounded-2xl overflow-hidden">
+                <img 
+                  src={modeloContabilidade} 
+                  alt="Profissional de contabilidade" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
 
               {/* Floating Card */}
@@ -79,8 +83,8 @@ const HeroSection = () => {
                   <Rocket className="h-5 w-5 text-emerald-green" />
                 </div>
                 <div>
-                  <p className="font-semibold text-graphite text-sm">+500 empresas</p>
-                  <p className="text-xs text-muted-foreground">atendidas com sucesso</p>
+                  <p className="font-semibold text-graphite text-sm">+100 clientes</p>
+                  <p className="text-xs text-muted-foreground">atendidos com sucesso</p>
                 </div>
               </div>
             </div>

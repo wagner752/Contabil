@@ -1,31 +1,31 @@
 import { Star } from "lucide-react";
 
 const clients = [
-  { name: "TechCorp", logo: "TC" },
-  { name: "StartupBR", logo: "SB" },
-  { name: "IndustryMax", logo: "IM" },
-  { name: "ComércioPlus", logo: "CP" },
-  { name: "ServiçosPro", logo: "SP" },
+  { name: "TechNova", logo: "TN" },
+  { name: "GlobalTech", logo: "GT" },
+  { name: "BlueStar", logo: "BS" },
+  { name: "GreenPath", logo: "GP" },
+  { name: "NextLevel", logo: "NL" },
 ];
 
 const testimonials = [
   {
     name: "Carlos Silva",
-    company: "TechCorp Ltda",
+    company: "TechNova Ltda",
     avatar: "CS",
     rating: 5,
     text: "Excelente atendimento! A equipe sempre pronta para ajudar e resolver qualquer dúvida. Recomendo fortemente.",
   },
   {
     name: "Ana Beatriz",
-    company: "StartupBR",
+    company: "GlobalTech",
     avatar: "AB",
     rating: 5,
     text: "Profissionais extremamente competentes. Desde que contratamos, nossa gestão financeira melhorou muito.",
   },
   {
     name: "Roberto Mendes",
-    company: "IndustryMax",
+    company: "BlueStar",
     avatar: "RM",
     rating: 5,
     text: "A contabilidade consultiva deles realmente faz diferença. Nos ajudaram a economizar milhares em impostos.",
@@ -34,7 +34,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Clients Carousel */}
         <div className="mb-20">
@@ -46,11 +46,14 @@ const TestimonialsSection = () => {
               {[...clients, ...clients].map((client, index) => (
                 <div
                   key={`${client.name}-${index}`}
-                  className="flex-shrink-0 w-32 h-16 bg-ice-gray rounded-xl flex items-center justify-center"
+                  className="flex-shrink-0 w-40 h-20 bg-ice-gray rounded-xl flex items-center justify-center border border-gray-100"
                 >
-                  <span className="text-2xl font-heading font-bold text-muted-foreground/50">
-                    {client.logo}
-                  </span>
+                  <div className="text-center">
+                    <span className="text-2xl font-heading font-bold text-petrol-blue/60">
+                      {client.logo}
+                    </span>
+                    <p className="text-xs text-muted-foreground mt-1">{client.name}</p>
+                  </div>
                 </div>
               ))}
             </div>

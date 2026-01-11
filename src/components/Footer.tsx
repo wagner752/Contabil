@@ -11,8 +11,12 @@ const Footer = () => {
     "Departamento Pessoal",
   ];
 
+  const handleSendResume = () => {
+    window.location.href = "mailto:wagner752@gmail.com?subject=Envio de Currículo - Trabalhe Conosco";
+  };
+
   return (
-    <footer className="bg-deep-blue pt-20 pb-8">
+    <footer id="contato" className="bg-deep-blue pt-20 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1 - Logo & Social */}
@@ -28,13 +32,17 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://instagram.com/w__wagner"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-green transition-colors duration-300"
               >
                 <Instagram className="h-5 w-5 text-white" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/wagner--cruz"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-emerald-green transition-colors duration-300"
               >
                 <Linkedin className="h-5 w-5 text-white" />
@@ -65,7 +73,7 @@ const Footer = () => {
             <p className="text-white/60 text-sm mb-6 leading-relaxed">
               Quer fazer parte do nosso time? Estamos sempre em busca de talentos que compartilham nossa paixão por contabilidade.
             </p>
-            <Button variant="cta" size="default" className="gap-2">
+            <Button variant="cta" size="default" className="gap-2" onClick={handleSendResume}>
               <Send className="h-4 w-4" />
               Enviar Currículo
             </Button>
@@ -78,26 +86,35 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-emerald-green flex-shrink-0 mt-0.5" />
                 <p className="text-white/60 text-sm">
-                  Av. Paulista, 1000 - Sala 1001<br />
-                  Bela Vista, São Paulo - SP<br />
-                  CEP: 01310-100
+                  Rua do Berilo, 303<br />
+                  Lagoa Nova, Natal - RN
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-emerald-green flex-shrink-0" />
-                <p className="text-white/60 text-sm">(11) 3000-0000</p>
+                <a href="tel:+5584991937731" className="text-white/60 text-sm hover:text-emerald-green transition-colors">
+                  (84) 99193-7731
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-emerald-green flex-shrink-0" />
-                <p className="text-white/60 text-sm">contato@contabil.com.br</p>
+                <a href="mailto:wagner752@gmail.com" className="text-white/60 text-sm hover:text-emerald-green transition-colors">
+                  wagner752@gmail.com
+                </a>
               </div>
 
-              {/* Mini Map Placeholder */}
-              <div className="mt-4 rounded-xl overflow-hidden h-32 bg-white/10 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-8 w-8 text-white/30 mx-auto mb-2" />
-                  <span className="text-white/40 text-xs">Google Maps</span>
-                </div>
+              {/* Real Google Maps */}
+              <div className="mt-4 rounded-xl overflow-hidden h-32">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.4419068831715!2d-35.20881282413147!3d-5.821583994223968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ff81a1d7d1c1%3A0x1c1c1c1c1c1c1c1c!2sRua%20do%20Berilo%2C%20303%20-%20Lagoa%20Nova%2C%20Natal%20-%20RN!5e0!3m2!1spt-BR!2sbr!4v1704067200000!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, filter: "grayscale(100%)" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização do escritório"
+                />
               </div>
             </div>
           </div>
