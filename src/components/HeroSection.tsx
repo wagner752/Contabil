@@ -1,4 +1,4 @@
-import { MessageCircle, ArrowRight, Rocket } from "lucide-react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import modeloContabilidade from "@/assets/modelo-contabilidade.png";
 
@@ -77,16 +77,6 @@ const HeroSection = () => {
                 />
               </div>
 
-              {/* Floating Card */}
-              <div className="floating-card absolute -left-8 top-1/3 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-green/20 flex items-center justify-center">
-                  <Rocket className="h-5 w-5 text-emerald-green" />
-                </div>
-                <div>
-                  <p className="font-semibold text-graphite text-sm">+100 clientes</p>
-                  <p className="text-xs text-muted-foreground">atendidos com sucesso</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
