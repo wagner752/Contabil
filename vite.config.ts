@@ -4,8 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  // 👇 ESSENCIAL no GitHub Pages quando o repo não é o usuário.github.io
-  base: "/Contabil/",
+  // 👇 Em produção usa /Contabil/ para GitHub Pages, em dev usa /
+  base: mode === "production" ? "/Contabil/" : "/",
 
   // 👇 Isso vai fazer o erro aparecer com arquivo/linha do seu código (tsx),
   // em vez de só index-xxxxx.js:40
