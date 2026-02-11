@@ -16,20 +16,20 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-8 relative z-10">
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 bg-emerald-green/90 text-white px-4 py-2 rounded-full text-sm font-medium animate-fade-in">
+            <div className="inline-flex items-center gap-2 bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium animate-fade-in">
               <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
               Contabilidade Consultiva
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-secondary-foreground leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
               Sua empresa pronta para{" "}
               <span className="text-gradient">avançar</span>{" "}
               com segurança.
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-white/80 max-w-xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-xl animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Gestão contábil moderna para empreendedores que não têm medo de crescer.
             </p>
 
@@ -52,16 +52,16 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="flex gap-8 pt-6 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <div>
-                <p className="text-3xl font-heading font-bold text-white">+100</p>
-                <p className="text-white/70 text-sm">Clientes atendidos</p>
+                <p className="text-3xl font-heading font-bold text-secondary-foreground">+100</p>
+                <p className="text-secondary-foreground/70 text-sm">Clientes atendidos</p>
               </div>
               <div>
-                <p className="text-3xl font-heading font-bold text-white">+8</p>
-                <p className="text-white/70 text-sm">Anos de experiência</p>
+                <p className="text-3xl font-heading font-bold text-secondary-foreground">+8</p>
+                <p className="text-secondary-foreground/70 text-sm">Anos de experiência</p>
               </div>
               <div>
-                <p className="text-3xl font-heading font-bold text-white">98%</p>
-                <p className="text-white/70 text-sm">Clientes satisfeitos</p>
+                <p className="text-3xl font-heading font-bold text-secondary-foreground">98%</p>
+                <p className="text-secondary-foreground/70 text-sm">Clientes satisfeitos</p>
               </div>
             </div>
           </div>

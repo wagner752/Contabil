@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 import { Menu, X, ChevronDown, Users, Target, HeartPulse, Eye, FileText, Calculator, BarChart3, Building2, Briefcase, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -32,10 +33,8 @@ const Navbar = () => {
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
             <div className="flex items-center gap-2">
-              <div className="h-10 w-10 rounded-lg bg-petrol-blue flex items-center justify-center">
-                <span className="text-white font-heading font-bold text-xl">C</span>
-              </div>
-              <span className="font-heading font-bold text-xl text-petrol-blue">Contábil</span>
+              <img src={logo} alt="Logo Avvance" className="h-10 w-auto object-contain" />
+              <span className="font-heading font-bold text-xl text-secondary">Avvance Contabilidade</span>
             </div>
           </a>
 
@@ -58,16 +57,16 @@ const Navbar = () => {
                 <NavigationMenuContent>
                   <div className="w-64 p-4 space-y-2">
                     <a href="#quem-somos" className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors">
-                      <Users className="h-5 w-5 text-emerald-green" />
+                      <Users className="h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium text-graphite">Quem Somos</p>
+                        <p className="font-medium text-foreground">Quem Somos</p>
                         <p className="text-sm text-muted-foreground">Nossa história</p>
                       </div>
                     </a>
                     <a href="#missao" className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors">
-                      <Target className="h-5 w-5 text-emerald-green" />
+                      <Target className="h-5 w-5 text-primary" />
                       <div>
-                        <p className="font-medium text-graphite">Missão, Visão e Valores</p>
+                        <p className="font-medium text-foreground">Missão, Visão e Valores</p>
                         <p className="text-sm text-muted-foreground">Nossos princípios</p>
                       </div>
                     </a>
@@ -84,8 +83,8 @@ const Navbar = () => {
                     {solutions.map((solution) => {
                       const Icon = solution.icon as any;
                       const iconClass = Icon === Eye || Icon === HeartPulse
-                        ? "h-6 w-6 text-emerald-green"
-                        : "h-5 w-5 text-emerald-green";
+                        ? "h-6 w-6 text-primary"
+                        : "h-5 w-5 text-primary";
 
                       return (
                         <a
@@ -95,7 +94,7 @@ const Navbar = () => {
                         >
                           <Icon className={iconClass} />
                           <div>
-                            <p className="font-medium text-graphite text-sm">{solution.name}</p>
+                            <p className="font-medium text-foreground text-sm">{solution.name}</p>
                             <p className="text-xs text-muted-foreground">{solution.description}</p>
                           </div>
                         </a>
@@ -129,9 +128,9 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-petrol-blue" />
+              <X className="h-6 w-6 text-secondary" />
             ) : (
-              <Menu className="h-6 w-6 text-petrol-blue" />
+              <Menu className="h-6 w-6 text-secondary" />
             )}
           </button>
         </div>

@@ -6,72 +6,79 @@
 
 @layer base {
   :root {
-    /* Main Brand Colors */
-    --petrol-blue: 210 71% 16%;
-    --emerald-green: 160 84% 39%;
-    --ice-gray: 210 40% 98%;
-    --graphite: 215 28% 17%;
-    --deep-blue: 213 83% 10%;
-    
+    /* New Brand Colors */
+    --avvance-gold: 45 85% 55%;
+    --avvance-dark: 220 15% 20%;
+    --off-white: 0 0% 98%;
+    --light-gray: 220 10% 96%;
+
     /* Semantic tokens */
     --background: 0 0% 100%;
-    --foreground: 215 28% 17%;
+    --foreground: var(--avvance-dark);
 
-    --card: 210 40% 98%;
-    --card-foreground: 215 28% 17%;
+    --card: var(--light-gray);
+    --card-foreground: var(--avvance-dark);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover-foreground: var(--avvance-dark);
 
-    --primary: 210 71% 16%;
-    --primary-foreground: 0 0% 100%;
+    --primary: var(--avvance-gold);
+    --primary-foreground: var(--avvance-dark);
 
-    --secondary: 160 84% 39%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: var(--avvance-dark);
+    --secondary-foreground: var(--off-white);
 
-    --muted: 210 40% 98%;
-    --muted-foreground: 215 16% 47%;
+    --muted: var(--light-gray);
+    --muted-foreground: 220 10% 45%; /* A lighter version of avvance-dark */
 
-    --accent: 160 84% 39%;
-    --accent-foreground: 0 0% 100%;
+    --accent: var(--avvance-gold);
+    --accent-foreground: var(--avvance-dark);
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 160 84% 39%;
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: var(--avvance-gold);
 
     --radius: 0.5rem;
 
     /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 71% 16%) 0%, hsl(210 60% 25%) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(160 84% 32%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--avvance-dark)) 0%, hsl(220 15% 30%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--avvance-gold)) 0%, hsl(45 85% 65%) 100%);
     
     /* Shadows */
-    --shadow-card: 0 4px 6px -1px rgba(11, 37, 69, 0.1), 0 2px 4px -1px rgba(11, 37, 69, 0.06);
-    --shadow-card-hover: 0 20px 25px -5px rgba(11, 37, 69, 0.1), 0 10px 10px -5px rgba(11, 37, 69, 0.04);
-    --shadow-navbar: 0 1px 3px 0 rgba(11, 37, 69, 0.1), 0 1px 2px 0 rgba(11, 37, 69, 0.06);
+    --shadow-card: 0 4px 6px -1px rgba(43, 44, 51, 0.1), 0 2px 4px -1px rgba(43, 44, 51, 0.06);
+    --shadow-card-hover: 0 20px 25px -5px rgba(43, 44, 51, 0.1), 0 10px 10px -5px rgba(43, 44, 51, 0.04);
+    --shadow-navbar: 0 1px 3px 0 rgba(43, 44, 51, 0.1), 0 1px 2px 0 rgba(43, 44, 51, 0.06);
   }
 
   .dark {
-    --background: 213 83% 10%;
-    --foreground: 210 40% 98%;
-    --card: 210 71% 16%;
-    --card-foreground: 210 40% 98%;
-    --popover: 213 83% 10%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 160 84% 39%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 71% 16%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 210 60% 25%;
-    --muted-foreground: 210 40% 70%;
-    --accent: 160 84% 39%;
-    --accent-foreground: 0 0% 100%;
-    --border: 210 60% 25%;
-    --input: 210 60% 25%;
-    --ring: 160 84% 39%;
+    /* Using dark background from Instagram inspiration */
+    --background: 220 15% 10%;
+    --foreground: var(--off-white);
+
+    --card: var(--avvance-dark);
+    --card-foreground: var(--off-white);
+
+    --popover: 220 15% 8%;
+    --popover-foreground: var(--off-white);
+
+    --primary: var(--avvance-gold);
+    --primary-foreground: var(--avvance-dark);
+
+    --secondary: var(--avvance-gold);
+    --secondary-foreground: var(--avvance-dark);
+
+    --muted: var(--avvance-dark);
+    --muted-foreground: 220 10% 65%;
+
+    --accent: var(--avvance-gold);
+    --accent-foreground: var(--avvance-dark);
+
+    --border: var(--avvance-dark);
+    --input: var(--avvance-dark);
+    --ring: var(--avvance-gold);
   }
 }
 
@@ -100,7 +107,7 @@
 
   .blob-decoration {
     @apply absolute rounded-full opacity-20;
-    background: hsl(var(--emerald-green));
+    background: hsl(var(--avvance-gold));
     filter: blur(60px);
   }
 
@@ -115,17 +122,17 @@
   }
 
   .nav-link {
-    @apply text-sm font-medium transition-colors duration-200;
-    color: hsl(var(--petrol-blue));
+    @apply text-base font-medium transition-colors duration-200;
+    color: hsl(var(--avvance-dark));
   }
 
   .nav-link:hover {
-    color: hsl(var(--emerald-green));
+    color: hsl(var(--avvance-gold));
   }
 
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--emerald-green)), hsl(160 84% 45%));
+    background-image: linear-gradient(135deg, hsl(var(--avvance-gold)), hsl(45 85% 45%));
   }
 
   .floating-card {
